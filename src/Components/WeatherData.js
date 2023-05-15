@@ -104,7 +104,7 @@ const WeatherData = () => {
                             <h4 className='temp'>{Math.round(weatherInfo.celcius1)}<sup>o</sup>c</h4>
                             <h4 className='city'>{weatherInfo.town},&nbsp;
                                 {weatherInfo.country}</h4>
-                            <img className='cloudIcon' src={weatherInfo.image} />
+                            <img className='cloudIcon' src={weatherInfo.image} alt='A descriptive cloud image' />
                             <div className='cloud'>
                                 {weatherInfo.cloud1 && weatherInfo.cloud1.description} {weatherInfo.cloudDescription1}<br />{moment(weatherInfo.dateTime1).format('LLLL')}
                             </div>
