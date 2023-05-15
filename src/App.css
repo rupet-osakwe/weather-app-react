@@ -2,8 +2,8 @@
 	text-align: center;
 }
 .searchArea {
-	position: absolute;
-	top: 5px;
+	position: fixed;
+	top: 3px;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -254,8 +254,14 @@ section:after {
 	color: white;
 }
 @media (max-width: 768px) {
+	.searchArea,
+	.globe,
+	.date {
+		position: fixed;
+		top: 2px;
+		z-index: 120;
+	}
 	.globe {
-		position: absolute;
 		left: 1rem;
 	}
 	section:before {
@@ -291,6 +297,17 @@ section:after {
 	}
 }
 @media (max-width: 600px) {
+	.searchArea,
+	.globe,
+	.date {
+		position: fixed;
+		top: 2px;
+		z-index: 120;
+	}
+	.city,
+	.temp {
+		font-size: 1.5rem;
+	}
 	section:before {
 		right: 5%;
 		top: 8rem;
@@ -310,18 +327,22 @@ section:after {
 		margin-bottom: 10px;
 	}
 	.weatherDetails {
-		padding-top: 18px;
-		padding: 4px;
+		position: relative;
+		top: 4rem;
 	}
 	.block {
-		margin-top: 1px;
 		backdrop-filter: blur(15px);
-		width: 300px;
+		width: 220px;
+		margin-bottom: 40px;
+		padding-right: 15px;
 	}
 	.Col,
 	.cloud,
 	.population,
 	.populationFigure {
-		font-size: 25px;
+		font-size: 17px;
+	}
+	section {
+		height: 100vh;
 	}
 }
