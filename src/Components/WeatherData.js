@@ -87,6 +87,7 @@ const WeatherData = () => {
             <section className={typeof weatherInfo.celcius1 !== "undefined" && weatherInfo.cloudDescription1 === 'broken clouds' ? 'warmWeather' : weatherInfo.cloudDescription1 === 'overcast clouds' ? 'cloudyWeather' : weatherInfo.cloudDescription1 === 'light rain' ? 'rainyWeather' : weatherInfo.cloudDescription1 === 'moderate rain' ? 'fewShower' : weatherInfo.cloudDescription1 === 'heavy intensity rain' ? 'rainyWeather' : weatherInfo.cloudDescription1 === 'clear sky' ? 'sunnyWeather' : weatherInfo.cloudDescription1 === 'scattered clouds' || 'few clouds' ? 'cloudyWeather' : 'mainArea'}>
 
                 <div className='searchArea'>
+                    <FcGlobe className='globe' />
                     <input className='searchInput' placeholder='Search...' type='text' value={nameOfCity} onChange={handleChange} onKeyPress={(event) => {
                         if (event.key === 'Enter') {
                             handleSearch()
@@ -95,16 +96,14 @@ const WeatherData = () => {
                     <button className='searchIconButton' onClick={handleSearch}><FcSearch /></button>
                 </div>
                 <span className='date'><FcDepartment />{CurrentDate(new Date())}</span>
-                <FcGlobe className='globe' />
                 <div className='error'>{error}</div>
                 {(weatherInfo.town !== "") ? (
-
                     <div className="weatherDetails" >
                         <div className='block'>
                             <h4 className='temp'>{Math.round(weatherInfo.celcius1)}<sup>o</sup>c</h4>
                             <h4 className='city'>{weatherInfo.town},&nbsp;
                                 {weatherInfo.country}</h4>
-                            <img className='cloudIcon' src={weatherInfo.image} alt='A descriptive cloud image' />
+                            <img className='cloudIcon' src={weatherInfo.image} alt='A descriptive cloud ' />
                             <div className='cloud'>
                                 {weatherInfo.cloud1 && weatherInfo.cloud1.description} {weatherInfo.cloudDescription1}<br />{moment(weatherInfo.dateTime1).format('LLLL')}
                             </div>
