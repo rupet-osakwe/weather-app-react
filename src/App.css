@@ -4,6 +4,7 @@
 .searchArea {
 	position: fixed;
 	top: 3px;
+	right: 2px;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -18,6 +19,7 @@
 	color: #19172e;
 	font-size: 18px;
 	border-radius: 50px;
+	margin-left: 3rem;
 	background-color: rgba(255, 255, 255, 0.5);
 }
 .searchIconButton {
@@ -34,8 +36,8 @@
 	width: 40px;
 	height: 40px;
 	position: absolute;
-	top: 9px;
-	right: 21rem;
+	top: 5px;
+	right: 20rem;
 	background-color: olivedrab;
 	border-radius: 50px;
 }
@@ -262,7 +264,8 @@ section:after {
 		z-index: 120;
 	}
 	.globe {
-		left: 1rem;
+		position: fixed;
+		left: 2.9rem;
 	}
 	section:before {
 		top: 20rem;
@@ -277,7 +280,6 @@ section:after {
 		height: 220px;
 	}
 	.block {
-		margin-top: 44px;
 		width: 480px;
 		margin-top: 0px;
 	}
@@ -298,11 +300,14 @@ section:after {
 }
 @media (max-width: 600px) {
 	.searchArea,
-	.globe,
 	.date {
 		position: fixed;
-		top: 2px;
+		top: 5px;
 		z-index: 120;
+	}
+	.globe {
+		position: fixed;
+		left: 3.9rem;
 	}
 	.city,
 	.temp {
@@ -320,6 +325,9 @@ section:after {
 		width: 160px;
 		height: 220px;
 	}
+	.block {
+		position: relative;
+	}
 	.date {
 		top: 1px;
 		right: 1px;
@@ -328,7 +336,7 @@ section:after {
 	}
 	.weatherDetails {
 		position: relative;
-		top: 4rem;
+		top: 1.5rem;
 	}
 	.block {
 		backdrop-filter: blur(15px);
