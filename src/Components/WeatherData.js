@@ -34,11 +34,11 @@ const WeatherData = () => {
                 }
 
                 if (response.status === 401) {
-                    setError(data.message)
+                    setError(response.data.message)
                     return
                 }
                 const data = response.data
-                console.log('Weather data:', data);
+
                 let imagePath = ""
                 const weatherDescription = data.list[0].weather[0].description.toLowerCase();
                 if (weatherDescription === 'overcast clouds') {
