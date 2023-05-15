@@ -32,6 +32,11 @@ const WeatherData = () => {
                     setError('Oops! city not found')
                     return
                 }
+
+                if (response.status === 401) {
+                    setError(data.message)
+                    return
+                }
                 const data = response.data
                 console.log('Weather data:', data);
                 let imagePath = ""
