@@ -37,7 +37,7 @@
 	height: 40px;
 	position: absolute;
 	top: 5px;
-	right: 20rem;
+	right: 19rem;
 	background-color: olivedrab;
 	border-radius: 50px;
 }
@@ -213,8 +213,6 @@ section:after {
 .populationFigure {
 	color: white;
 	font-size: 18px;
-	/* margin-top: 0.1px;
-	padding-top: 0.1px; */
 }
 .colContainer {
 	display: flex;
@@ -256,17 +254,30 @@ section:after {
 	color: white;
 }
 @media (max-width: 768px) {
+	.searchArea {
+		display: flex;
+	}
 	.searchArea,
 	.globe,
 	.date {
-		position: fixed;
-		top: 2px;
 		z-index: 120;
 	}
 	.globe {
 		position: fixed;
 		left: 2.9rem;
 	}
+	section {
+		height: 100vh;
+		border: 5px solid red;
+		background-position: bottom;
+	}
+	/* .weatherDetails {
+		position: relative;
+		height: 100vh;
+	} */
+	/* .block {
+		position: relative;
+	} */
 	section:before {
 		top: 20rem;
 		right: 14%;
@@ -279,10 +290,10 @@ section:after {
 		width: 185px;
 		height: 220px;
 	}
-	.block {
+	/* .block {
 		width: 480px;
-		margin-top: 0px;
-	}
+		margin-top: 20px;
+	} */
 	.Col,
 	.cloud,
 	.population,
@@ -291,7 +302,7 @@ section:after {
 	}
 	.city,
 	.temp {
-		font-size: 2.9rem;
+		font-size: 2rem;
 	}
 	.cloudIcon {
 		height: 80px;
@@ -299,16 +310,15 @@ section:after {
 	}
 }
 @media (max-width: 600px) {
+	.searchArea {
+		position: fixed;
+		display: flex;
+	}
 	.searchArea,
 	.date {
-		position: fixed;
-		top: 5px;
 		z-index: 120;
 	}
-	.globe {
-		position: fixed;
-		left: 3.9rem;
-	}
+
 	.city,
 	.temp {
 		font-size: 1.5rem;
@@ -329,10 +339,9 @@ section:after {
 		position: relative;
 	}
 	.date {
-		top: 1px;
-		right: 1px;
-		font-size: 0.5rem;
-		margin-bottom: 10px;
+		font-size: 0.6rem;
+		position: fixed;
+		width: 51px;
 	}
 	.weatherDetails {
 		position: relative;
