@@ -37,7 +37,7 @@
 	height: 40px;
 	position: absolute;
 	top: 5px;
-	right: 19rem;
+	right: 20.5rem;
 	background-color: olivedrab;
 	border-radius: 50px;
 }
@@ -147,7 +147,6 @@ section:after {
 	width: 85%;
 	height: 250px;
 	z-index: 100;
-	margin-top: 40px;
 }
 .date {
 	font-size: 1rem;
@@ -167,7 +166,7 @@ section:after {
 	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	padding: 4px;
-	margin: 10px;
+	margin: 4px;
 	border-radius: 20px;
 }
 .temp {
@@ -268,7 +267,6 @@ section:after {
 	}
 	section {
 		height: 100vh;
-		border: 5px solid red;
 		background-position: bottom;
 	}
 	/* .weatherDetails {
